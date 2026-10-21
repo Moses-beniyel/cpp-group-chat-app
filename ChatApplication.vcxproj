@@ -195,12 +195,15 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CChatClientDlg.h" />
     <ClInclude Include="ChatApplication.h" />
     <ClInclude Include="ChatApplicationDoc.h" />
     <ClInclude Include="ChatApplicationView.h" />
     <ClInclude Include="ClassView.h" />
+    <ClInclude Include="CLoginDialog.h" />
     <ClInclude Include="FileView.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Logger.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="OutputWnd.h" />
     <ClInclude Include="pch.h" />
@@ -210,11 +213,14 @@
     <ClInclude Include="ViewTree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CChatClientDlg.cpp" />
     <ClCompile Include="ChatApplication.cpp" />
     <ClCompile Include="ChatApplicationDoc.cpp" />
     <ClCompile Include="ChatApplicationView.cpp" />
     <ClCompile Include="ClassView.cpp" />
+    <ClCompile Include="CLoginDialog.cpp" />
     <ClCompile Include="FileView.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="OutputWnd.cpp" />
     <ClCompile Include="pch.cpp">

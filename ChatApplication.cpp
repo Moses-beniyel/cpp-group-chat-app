@@ -11,6 +11,7 @@
 
 #include "ChatApplicationDoc.h"
 #include "ChatApplicationView.h"
+#include "CLoginDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -135,10 +136,17 @@ BOOL CChatApplicationApp::InitInstance()
 	if (!ProcessShellCommand(cmdInfo))
 		return FALSE;
 
-	// The one and only window has been initialized, so show and update it
-	m_pMainWnd->ShowWindow(SW_SHOW);
-	m_pMainWnd->UpdateWindow();
-	return TRUE;
+	CLoginDialog dlg;
+	m_pMainWnd->ShowWindow(SW_HIDE);
+
+	INT_PTR nResponse = dlg.DoModal();
+
+	if (nResponse == IDOK)
+	{
+		return TRUE;
+	}
+
+	return FALSE;
 }
 
 int CChatApplicationApp::ExitInstance()
